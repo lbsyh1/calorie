@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import MainPage from "./components/MainPage";
-import { BrowserRouter, Router, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SearchPage from "./components/SearchPage";
 import AddPage from "./components/AddPage";
 import ListPage from "./components/ListPage";
@@ -11,13 +11,13 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Router>
-          <Route path="/" exact component={MainPage} />
-          <Route path="/search" exact component={SearchPage} />
-          <Route path="/list" exact component={ListPage} />
-          <Route path="/add" exact component={AddPage} />
-          <Route path="/edit" exact component={EditPage} />
-        </Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="search" element={<SearchPage />} />
+          <Route path="list" element={<ListPage />} />
+          <Route path="add" element={<AddPage />} />
+          <Route path="edit" element={<EditPage />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
