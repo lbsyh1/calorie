@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./page/Home";
-import Search from "./page/Search";
-import AddFoodCalorie from "./page/AddFoodCalorie";
-import MyCalorieList from "./page/MyCalorieList";
-import EditFoodCalorie from "./page/EditFoodCalorie";
+import Home from "@/page/Home";
+import Search from "@/page/Search";
+import AddFoodCalorie from "@/page/AddFoodCalorie";
+import MyCalorieList from "@/page/MyCalorieList";
+import EditFoodCalorie from "@/page/EditFoodCalorie";
 
 function App() {
   return (
