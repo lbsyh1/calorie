@@ -13,7 +13,7 @@ const sideBarIn(){
 `;
 
 styled(SideBar)`
-  animation: ${animation} 1s linear infinite;
+  animation: ${animation} 1s linear ease-in-out;
 `;
 }
 const sideBarOut(){
@@ -40,7 +40,7 @@ const sideBar = () => {
 };
 
 
-sideBar();
+
 const MainPage = () => {
   return (
     <div>
