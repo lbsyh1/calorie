@@ -25,5 +25,6 @@ module.exports = {
     port: 3000,
     liveReload: true,
     static: path.resolve(__dirname, "public"),
+    historyApiFallback: true,
   },
 };
