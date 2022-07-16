@@ -1,9 +1,10 @@
-import React from 'react';
-import DehazeIcon from '@mui/icons-material/Dehaze';
-import styled, { keyframes } from 'styled-components';
-import Box from './Box';
-import Chart from './Chart';
-import SideBar from './SideBar';
+import React from "react";
+import DehazeIcon from "@mui/icons-material/Dehaze";
+import styled from "@emotion/styled";
+import { keyframes } from "@emotion/css";
+import Box from "./Box";
+import Chart from "./Chart";
+import SideBar from "./SideBar";
 
 // const sideBarIn = () => {
 //   const animation = keyframes`
@@ -43,7 +44,7 @@ const MainPage = () => {
     <div>
       <DehazeIcon onClick={sideBar} />
       <SideBar />
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: "flex" }}>
         <Box description="현재 칼로리 섭취량" calories="40" />
         <Box description="허용된 칼로리 섭취 잔량" calories="360" />
       </div>
