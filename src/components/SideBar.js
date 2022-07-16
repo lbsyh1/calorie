@@ -1,18 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
+import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import DehazeIcon from "@mui/icons-material/Dehaze";
+
+const Wrapper = styled.div`
+  top: 0;
+  width: 100%;
+  height: 100%;
+`;
+const Icon = styled.div`
+  position: absolute;
+  z-index: 2;
+`;
+const Section = styled.section`
+  position: absolute;
+
+  top: 0;
+  width: 80%;
+  height: 100%;
+  background: #fcfacb;
+`;
+const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+`;
 const SideBar = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const onClickIcon = () => {
+    setIsActive(!isActive);
+  };
   return (
-    <div>
-      <div className="w3-sidebar w3-bar-block" style={{ width: "25%" }}>
-        <nav>
-          <Link to="/">GoToHomePage</Link>
-          <Link to="/my-calories/add">GoToAddPage</Link>
-          <Link to="/my-calories/edit">GoToEditPage</Link>
-          <Link to="/search">GoToSearchPage</Link>
-          <Link to="/my-calories">GoToCalorieListPage</Link>
-        </nav>
-      </div>
-    </div>
+    <Wrapper>
+      <Icon onClick={onClickIcon}>
+        {isActive ? <ArrowBackIosIcon /> : <DehazeIcon />}
+      </Icon>
+
+      {isActive && (
+        <Section>
+          <Nav>
+            <Link to="/">GoToHomePage</Link>
+            <Link to="/my-calories/add">GoToAddPage</Link>
+            <Link to="/my-calories/edit">GoToEditPage</Link>
+            <Link to="/search">GoToSearchPage</Link>
+            <Link to="/my-calories">GoToCalorieListPage</Link>
+          </Nav>
+        </Section>
+      )}
+    </Wrapper>
   );
 };
 
