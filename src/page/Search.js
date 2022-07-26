@@ -19,7 +19,7 @@ const DisplayFlex = styled.div`
 export default function () {
   return (
     <div>
-      <p>search</p>
+      <p>search1</p>
       <Wrapper>
         <SearchBar />
       </Wrapper>
