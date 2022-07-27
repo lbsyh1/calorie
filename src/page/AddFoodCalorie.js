@@ -3,6 +3,7 @@ import SearchBarOfSearch from "../components/SearchBar";
 import styled from "styled-components";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import FoodRecord from "../components/FoodRecord";
+
 export default function () {
   const Wrapper = styled.div`
     border: 1px solid black;
@@ -15,6 +16,7 @@ export default function () {
   const DisplayFlex = styled.div`
     display: flex;
   `;
+
   return (
     <div>
       <p>AddFoodCalorie</p>
