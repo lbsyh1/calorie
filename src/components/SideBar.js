@@ -32,6 +32,10 @@ const SideBar = () => {
   const onClickIcon = () => {
     setIsActive(!isActive);
   };
+
+  const onClickNav = () => {
+    setIsActive(!isActive);
+  };
   return (
     <Wrapper>
       <Icon onClick={onClickIcon}>
@@ -40,7 +44,7 @@ const SideBar = () => {
 
       {isActive && (
         <Section>
-          <Nav>
+          <Nav onClick={onClickNav}>
             <Link to="/">GoToHomePage</Link>
             <Link to="/my-calories/add">GoToAddPage</Link>
             <Link to="/my-calories/edit">GoToEditPage</Link>

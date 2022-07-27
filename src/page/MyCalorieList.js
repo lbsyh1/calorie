@@ -34,7 +34,7 @@ export default function () {
       </Wrapper>
       <Section>
         <Icon>
-          <ControlPointIcon width="50px" height="50px" />
+          <ControlPointIcon style={{ width: "50px", height: "50px" }} />
         </Icon>
       </Section>
     </div>
