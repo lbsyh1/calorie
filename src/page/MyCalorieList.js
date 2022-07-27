@@ -2,6 +2,8 @@ import React from "react";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import Box from "../components/Box";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+
 export default function () {
   const Wrapper = styled.div`
     border: 1px solid black;
@@ -17,6 +19,13 @@ export default function () {
     width: 100%;
     height: 100%;
   `;
+
+  const navigate = useNavigate();
+
+  const goToEdit = () => {
+    navigate("/my-calories/edit");
+  };
+
   return (
     <div>
       <p>MyCalorieList</p>
@@ -34,7 +43,10 @@ export default function () {
       </Wrapper>
       <Section>
         <Icon>
-          <ControlPointIcon style={{ width: "50px", height: "50px" }} />
+          <ControlPointIcon
+            style={{ width: "50px", height: "50px", cursor: "pointer" }}
+            onClick={goToEdit}
+          />
         </Icon>
       </Section>
     </div>
