@@ -13,17 +13,15 @@ import "@/reset.css";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
   max-width: 500px;
+  min-height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
 `;
 
 const PageWrapper = styled.section`
-  position: relative;
   margin-top: 50px;
-  min-height: calc(100vh - 50px);
 `;
 function App() {
   return (

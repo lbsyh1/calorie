@@ -9,7 +9,7 @@ const BoxWrapper = styled.div``;
 
 export default function () {
   const Icon = styled.div`
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     right: 10px;
     display: flex;
@@ -26,20 +26,7 @@ export default function () {
   return (
     <Wrapper>
       <p>MyCalorieList</p>
-
       <BoxWrapper>
-        <Box date="2022-06-16" totalCalories="1500kcal" numberOfIntakes="3" />
-        <Box date="2022-06-17" totalCalories="2000kcal" numberOfIntakes="4" />
-        <Box date="2022-06-18" totalCalories="1800kcal" numberOfIntakes="4" />
-        <Box date="2022-06-19" totalCalories="1700kcal" numberOfIntakes="3" />
-        <Box date="2022-06-16" totalCalories="1500kcal" numberOfIntakes="3" />
-        <Box date="2022-06-17" totalCalories="2000kcal" numberOfIntakes="4" />
-        <Box date="2022-06-18" totalCalories="1800kcal" numberOfIntakes="4" />
-        <Box date="2022-06-19" totalCalories="1700kcal" numberOfIntakes="3" />
-        <Box date="2022-06-16" totalCalories="1500kcal" numberOfIntakes="3" />
-        <Box date="2022-06-17" totalCalories="2000kcal" numberOfIntakes="4" />
-        <Box date="2022-06-18" totalCalories="1800kcal" numberOfIntakes="4" />
-        <Box date="2022-06-19" totalCalories="1700kcal" numberOfIntakes="3" />
         <Box date="2022-06-16" totalCalories="1500kcal" numberOfIntakes="3" />
         <Box date="2022-06-17" totalCalories="2000kcal" numberOfIntakes="4" />
         <Box date="2022-06-18" totalCalories="1800kcal" numberOfIntakes="4" />
