@@ -7,7 +7,6 @@ import DehazeIcon from "@mui/icons-material/Dehaze";
 const Wrapper = styled.div`
   top: 0;
   width: 100%;
-  height: 100%;
 `;
 const Icon = styled.div`
   position: absolute;
@@ -20,6 +19,7 @@ const Section = styled.section`
   width: 80%;
   height: 100%;
   background: #fcfacb;
+  transition: all 1s;
 `;
 const Nav = styled.nav`
   display: flex;

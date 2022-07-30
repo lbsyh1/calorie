@@ -13,6 +13,7 @@ import "@/reset.css";
 
 const Wrapper = styled.div`
   width: 100%;
+  height: 100vh;
   max-width: 500px;
   margin: auto;
   display: flex;
@@ -20,7 +21,9 @@ const Wrapper = styled.div`
 `;
 
 const PageWrapper = styled.section`
+  position: relative;
   margin-top: 50px;
+  min-height: calc(100vh - 50px);
 `;
 function App() {
   return (
