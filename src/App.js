@@ -9,6 +9,7 @@ import MyCalorieList from "@/page/MyCalorieList";
 import EditFoodCalorie from "@/page/EditFoodCalorie";
 
 import SideBar from "./components/SideBar";
+import "@/reset.css";
 
 const Wrapper = styled.div`
   width: 100%;
