@@ -4,14 +4,21 @@ const Wrapper = styled.div`
   border: 1px solid black;
   background: #ffe9cf;
 `;
-const Box = (props) => {
+
+const Box = ({
+  description,
+  calories,
+  date,
+  totalCalories,
+  numberOfIntakes,
+}) => {
   return (
     <Wrapper>
-      <h1>{props.description}</h1>
-      <p>{props.calories}</p>
-      <p>날짜{props.date}</p>
-      <p>총 칼로리{props.totalCalories}</p>
-      <p>음식섭취횟수{props.numberOfIntakes}</p>
+      <h1>{description}</h1>
+      <p>{calories}</p>
+      {date && <p>날짜{date}</p>}
+      {totalCalories && <p>총 칼로리{totalCalories}</p>}
+      {numberOfIntakes && <p>음식섭취횟수{numberOfIntakes}</p>}
     </Wrapper>
   );
 };
