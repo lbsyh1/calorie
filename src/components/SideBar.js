@@ -10,16 +10,16 @@ const Wrapper = styled.div`
 `;
 const Icon = styled.div`
   position: absolute;
-  z-index: 2;
+  z-index: 3;
 `;
 const Section = styled.section`
   position: absolute;
-
   top: 0;
   width: 80%;
   height: 100%;
   background: #fcfacb;
   transition: all 1s;
+  z-index: 2;
 `;
 const Nav = styled.nav`
   display: flex;
