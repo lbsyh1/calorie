@@ -40,9 +40,14 @@ export default function () {
     navigate("/my-calories/edit");
   };
 
+  const sumCalories = calories.reduce(
+    (prev, cur) => prev + Number(cur.totalCalories),
+    0
+  );
+  
   return (
     <Wrapper>
-      <p>MyCalorieList</p>
+      <p>합계: {sumCalories}kcal</p>
       <BoxWrapper>
         {calories.map(
           ({ date, totalCalories, numberOfIntakes, foodName, id }, i) => (
