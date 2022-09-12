@@ -17,3 +17,8 @@ export const createCalorie = async (data) => {
   });
   return response;
 };
+export const deleteCalorie = async (id) => {
+  await fetch(`http://localhost:8000/calories/${id}`, {
+    method: "DELETE",
+  });
+};

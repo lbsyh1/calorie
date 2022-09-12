@@ -3,7 +3,7 @@ import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import Box from "../components/Box";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import { getCalories } from "@/service/CalorieService";
+import { getCalories, deleteCalorie } from "@/service/CalorieService";
 
 const Wrapper = styled.section``;
 const BoxWrapper = styled.div``;
@@ -23,10 +23,17 @@ export default function () {
     setCalories(data);
   };
 
+  const onDeleteCalorie = async (id) => {
+    await deleteCalorie(id);
+    initCalories();
+  };
+
   useEffect(() => {
     initCalories();
   }, []);
-
+  // useEffect의 사용은 무한루프를 피하기 위해 필요하다
+  // 그렇지 않으면 getCalorie호출->state변경으로 리렌더링->localhost8000에서 데이터를 get해서
+  // 다시 getCalories호출->state변경으로 리렌더링 무한루프가 된다
   const navigate = useNavigate();
 
   const goToEdit = () => {
@@ -37,14 +44,18 @@ export default function () {
     <Wrapper>
       <p>MyCalorieList</p>
       <BoxWrapper>
-        {calories.map(({ date, totalCalories, numberOfIntakes }, i) => (
-          <Box
-            key={`calorie-card-${i}`}
-            date={date}
-            totalCalories={totalCalories}
-            numberOfIntakes={numberOfIntakes}
-          />
-        ))}
+        {calories.map(
+          ({ date, totalCalories, numberOfIntakes, foodName, id }, i) => (
+            <Box
+              key={`calorie-card-${i}`}
+              date={date}
+              totalCalories={totalCalories}
+              numberOfIntakes={numberOfIntakes}
+              foodName={foodName}
+              onDeleteCalorie={() => onDeleteCalorie(id)}
+            />
+          )
+        )}
       </BoxWrapper>
 
       <Icon>
